@@ -1,9 +1,10 @@
 open Gfile
 open Tools
     
-let testit g = 
-        let ng = add_arc (gmap g int_of_string) 3 5 10 in
-        gmap ng string_of_int
+let testit g =
+    let string_g = gmap g int_of_string in 
+        gmap (add_arc string_g 0 3 50) string_of_int 
+        
 
 let () =
 
@@ -36,6 +37,8 @@ let () =
 
   (* Rewrite the graph that has been read. *)
   let () = write_file outfile new_graph in
+
+  let () = export outfile new_graph in
 
   ()
 

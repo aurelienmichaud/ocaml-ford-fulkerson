@@ -11,7 +11,7 @@ graph.cmo: graph.mli graph.ml
 ftest: graph.cmo gfile.cmo tools.cmo ftest.ml
 	ocamlc -o ftest graph.cmo gfile.cmo tools.cmo ftest.ml
 
-all: graph.cmo gfile.cmo tools.cmo
+all: ftest graph.cmo gfile.cmo tools.cmo
 
 .PHONY: clean
 clean:
