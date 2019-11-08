@@ -31,14 +31,14 @@ let () =
 
   (* TEST CODE HERE *)
 
-  let new_graph = testit graph in
+  (*let new_graph = testit graph in*)
 
   (* END OF TEST CODE HERE *)
 
   (* Rewrite the graph that has been read. *)
-  let () = write_file outfile new_graph in
+  (*let () = write_file outfile new_graph in*)
 
-  let () = export outfile new_graph in
+  let () = export infile graph in
 
   ()
 

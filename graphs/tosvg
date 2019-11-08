@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for f in `ls -A1 | grep -E "*.dot$" | sed -r "s/(.*)[.]dot$/\1/g"`; do
+	dot -Tsvg "$f.dot" > "SVGs/$f.svg"
+done
+
+
+
