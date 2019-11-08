@@ -1,8 +1,4 @@
 
-SRC_DIR=./src/
-SRC_MLI=$(wildcard $(SRC_DIR)/*.mli)
-SRC_ML=$(wildcard $(SRC_DIR)/*.ml)
-
 tools.cmo: graph.cmo tools.mli tools.ml
 	ocamlc -c tools.mli tools.ml
 
