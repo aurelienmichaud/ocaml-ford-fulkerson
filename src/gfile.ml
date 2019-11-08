@@ -93,4 +93,21 @@ let from_file path =
   
   close_in infile ;
   final_graph
+
+let export path graph to_string = 
   
+  (* Open a write-file. *)
+  let ff = open_out path in
+
+  fprintf ff "digraph finite_state_machine {\n" ;
+  fprintf ff "\trankdir=LR;\n" ;
+  fprintf ff "\tsize\"8,5\"\n" ;
+  fprintf ff "\tnode [shape = circle]\n\n" ;
+
+  (* Write all arcs *)
+  e_iter graph (fun id1 id2 lbl -> fprintf ff "%d -> %d [ label = \"%s\" ]\n" id1 id2 (to_string lbl)) ;
+  
+  fprintf ff "}\n" ;
+  
+  close_out ff ;
+  ()

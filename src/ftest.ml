@@ -1,6 +1,10 @@
 open Gfile
 open Tools
     
+let testit g = 
+        let ng = add_arc (gmap g int_of_string) 3 5 10 in
+        gmap ng string_of_int
+
 let () =
 
   (* Check the number of command-line arguments *)
@@ -26,12 +30,12 @@ let () =
 
   (* TEST CODE HERE *)
 
-  let new_graph = add_arc (gmap graph int_of_string) 3 1 10 in
+  let new_graph = testit graph in
 
   (* END OF TEST CODE HERE *)
 
   (* Rewrite the graph that has been read. *)
-  let () = write_file outfile (gmap new_graph string_of_int) in
+  let () = write_file outfile new_graph in
 
   ()
 
