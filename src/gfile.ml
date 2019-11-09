@@ -99,9 +99,8 @@ let export path graph =
   (* Open a write-file. *)
   let ff = open_out (path ^ ".dot") in
 
-  fprintf ff "digraph graph {\n" ;
+  fprintf ff "digraph finite_state_machine {\n" ;
   fprintf ff "\trankdir=LR;\n" ;
-  fprintf ff "\tsize=\"8,5\"\n" ;
   fprintf ff "\tnode [shape = circle];\n" ;
 
   (* Write all arcs *)
