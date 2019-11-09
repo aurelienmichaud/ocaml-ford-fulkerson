@@ -7,5 +7,5 @@ type edge = flow * capacity
 
 type flownetwork = edge graph
 
-val ford_fulkerson: flownetwork -> flownetwork
+val ford_fulkerson: flownetwork -> id -> id -> flownetwork
 
