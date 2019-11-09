@@ -1,5 +1,6 @@
 open Gfile
 open Tools
+open Flownetwork
 
 let testit g =
     let string_g = gmap g int_of_string in 

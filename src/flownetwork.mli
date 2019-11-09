@@ -5,3 +5,7 @@ type capacity = int
 
 type edge = flow * capacity
 
+type flownetwork = edge graph
+
+val ford_fulkerson: flownetwork -> flownetwork
+
