@@ -8,14 +8,14 @@ type edge = flow * capacity
 type flownetwork = edge graph
 
 (* Depth First Search algorithm
- * s: Start node, the node we begin our research
- * e: End node, the node we are looking for. Once we reached it, we end the search
+ * s: Start node, the node we begin our search from
+ * e: End node, the node we are looking for. Once we reach it, we end the search
  *)
 let dfs s e = 
    () 
 
 (* fn : flownetwork *)
-(* s: Start node, the node we begin our research
+(* s: Start node, the node we begin our research from
  * e: End node, the node we are looking for
  *)
 
