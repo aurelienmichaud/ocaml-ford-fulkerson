@@ -22,7 +22,7 @@ let dfs s e =
 let ford_fulkerson fn s e = 
     (* Check whether the start node or the end node does not exist *)
     if (not (node_exists fn s)) || (not (node_exists fn e)) then
-        raise (Graph_error ("Start node or End node do not exist in flow network"))
+        raise (Graph_error ("Start node and/or End node do/es not exist in flow network"))
     else
 
 
