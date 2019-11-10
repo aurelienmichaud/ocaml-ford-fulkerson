@@ -1,5 +1,3 @@
-
-
 SRC_DIR=src
 BUILD_DIR=./_build/
 COMP=ocamlbuild
