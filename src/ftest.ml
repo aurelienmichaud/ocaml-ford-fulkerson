@@ -3,7 +3,7 @@ open Tools
 open Flownetwork
 
 let testit g =
-    g
+    ford_fulkerson g 0 7
 
 let () =
 
