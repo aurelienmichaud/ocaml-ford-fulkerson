@@ -90,21 +90,6 @@ let rec update_flow_network fn delta = function
 
 
 
-(* Depth First Search algorithm
- * fn: flownetwork we will be searching in
- * s: Start node, the node we begin our search from
- * e: End node, the node we are looking for. Once we reach it, we end the search
- *)
-(* let dfs fn s e = 
-    let rec _dfs acc visited_nodes = function 
-    | []            -> (acc, visited_nodes) 
-    | (id, lbl)::t  ->
-        try
-            let _id = List.find (fun i -> i = id) visited_nodes in
-        with Not_found  ->
-            _dfs id::acc id::visited_nodes 
-*)
-
 (* [WIP] Update arc between id1 & id2 nodes
 in flownetwork "fn" with flow value "flow".
  * fn : the flownetwork we are searching in.
