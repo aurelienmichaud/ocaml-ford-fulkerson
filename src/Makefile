@@ -1,5 +1,6 @@
+libs: graph.cmo gfile.cmo tools.cmo ffile.cmo flownetwork.cmo
 
-ffile.cmo: gfile.cmo flownetwork.cmo ffile.mli ffile.ml
+ffile.cmo: gfile.cmo tools.cmo flownetwork.cmo ffile.mli ffile.ml
 	ocamlc -c ffile.mli ffile.ml
 
 flownetwork.cmo: graph.cmo flownetwork.mli flownetwork.ml
@@ -8,7 +9,7 @@ flownetwork.cmo: graph.cmo flownetwork.mli flownetwork.ml
 tools.cmo: graph.cmo tools.mli tools.ml
 	ocamlc -c tools.mli tools.ml
 
-gfile.cmo: gfile.mli gfile.ml
+gfile.cmo: graph.cmo gfile.mli gfile.ml
 	ocamlc -c gfile.mli gfile.ml
 
 graph.cmo: graph.mli graph.ml
@@ -17,7 +18,7 @@ graph.cmo: graph.mli graph.ml
 ftest: graph.cmo gfile.cmo tools.cmo ftest.ml
 	ocamlc -o ftest graph.cmo gfile.cmo tools.cmo flownetwork.cmo ffile.cmo ftest.ml
 
-all: graph.cmo gfile.cmo tools.cmo flownetwork.cmo ffile.cmo ftest
+all: libs ftest
 
 .PHONY: clean
 clean:
