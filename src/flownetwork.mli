@@ -9,3 +9,5 @@ type flownetwork = edge graph
 
 val ford_fulkerson: flownetwork -> id -> id -> flownetwork
 
+(* val update_arc: flownetwork -> id -> id -> int -> () *)
+
