@@ -9,8 +9,6 @@ type edge = flow * capacity
 type flownetwork = edge graph
 
 
-
-
 (* [WIP] Update arc between id1 & id2 nodes
 in flownetwork "fn" with flow value "flow".
  * fn : the flownetwork we are searching in.
@@ -138,26 +136,17 @@ let ford_fulkerson fn sc sk =
         raise (Graph_error ("Source node and/or Sink node do/es not exist in flow network"))
     else
     
-    (* TEST 
-     * Find one augmenting path, update the flow network with the delta found
-     * in that augmented path, and return that new flow network *)
-    (*
-    try
-        let _ = find_augmenting_path fn sc sk in
-        fn
-    with
-        (Found_Augmenting_Path (path, delta))   -> update_flow_network fn delta path
-    *)
-
-    
     let rec loop fn = 
     
         let residual_fn = get_residual_graph fn in
 
         try
+            (* Find an augmenting path in the residual graph *)
             let _ = find_augmenting_path residual_fn sc sk in
             (* If no exception is raised, then we finished the algorithm *)
             fn
+        (* If we found such a path, update the flow network with the bottleneck capacity delta
+         * and do it all again *)
         with (Found_Augmenting_Path (path, delta))  -> loop (update_flow_network fn delta path)
     in
     loop fn
