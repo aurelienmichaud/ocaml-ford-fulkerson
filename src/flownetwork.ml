@@ -36,6 +36,8 @@ let update fn id1 id2 flow =
 type direction = Same | Opposite
 type residual_graph = (flow * direction) graph
 
+exception Found_Augmenting_Path of (((id * direction) list) * int)
+
 let get_residual_graph fn = 
     let cloned = clone_nodes fn in
     e_fold
@@ -55,28 +57,8 @@ let get_residual_graph fn =
             residual_graph)
     cloned
 
-
-exception Found_Augmenting_Path of (((id * direction) list) * int)
-
-(* Find one augmenting path in a residual graph
- * It returns the found path, and the bottleneck capacity (delta)
- * by which we will increase the flow of each arc described in the path
- * The returning path is shaped as follow :
- * path : (id, direction) list
- * For instance : path = [(sc, Same); (3, Opposite); (7, Same); (sk, Same)]
- * which means we will need (in ford-fulkerson algorithm) to update 
- * the following arcs :
- * (sc, 3) with +delta; (3, 7) with -delta; (7, sk) with +delta
- * So 'Same direction means we will increase by +delta, 
- * and 'Opposite' direction by -delta.
- * The direction of the first pair (id, direction) doesn't matter
-
- * Keep in mind that with floating capacities and flows, it will only terminate
- * with Breadth First Search (BFS) algorithm. But, for now, since we only use
- * integer operations, we assume we are only working on integers.
- *)
-let find_augmenting_path rg sc sk = 
-    (* === Depth First Search === *)
+(* === Depth First Search === *)
+let dfs rg sc sk = 
     let rec dfs acc delta visited = function
         | []            -> visited
         | (id, (residual_flow, direction))::t  -> 
@@ -98,17 +80,20 @@ let find_augmenting_path rg sc sk =
                         dfs ((id, direction)::acc) delta (id::visited) (out_arcs rg id)
                 in
                 dfs acc delta new_visited t
-        
     in
+    dfs [(sc, Same)] 0 [sc] (out_arcs rg sc)
 
-    (* === Breadth First Search === *)
+
+
+(* === Breadth First Search === *)
+let bfs rg sc sk =
     let rec bfs acc delta visited = function
         | []    -> visited
         | (id, (residual_flow, direction))::t ->
             if id = sk then
                 let delta = if residual_flow < delta || delta = 0 then residual_flow else delta in
                 raise (Found_Augmenting_Path (List.rev ((sk, direction)::acc), delta))
-    
+
             (* We already visited that node, so we ignore it and parse the other out_arcs provided in the list *)
             else if List.mem id visited then
                 bfs acc delta visited t
@@ -124,8 +109,30 @@ let find_augmenting_path rg sc sk =
                     bfs ((id, direction)::acc) delta new_visited (out_arcs rg id)
 
     in
-
     bfs [(sc, Same)] 0 [sc] (out_arcs rg sc)
+
+
+(* Find one augmenting path in a residual graph
+ * It returns the found path, and the bottleneck capacity (delta)
+ * by which we will increase the flow of each arc described in the path
+ * The returning path is shaped as follow :
+ * path : (id, direction) list
+ * For instance : path = [(sc, Same); (3, Opposite); (7, Same); (sk, Same)]
+ * which means we will need (in ford-fulkerson algorithm) to update 
+ * the following arcs :
+ * (sc, 3) with +delta; (3, 7) with -delta; (7, sk) with +delta
+ * So 'Same direction means we will increase by +delta, 
+ * and 'Opposite' direction by -delta.
+ * The direction of the first pair (id, direction) doesn't matter
+
+ * Keep in mind that with floating capacities and flows, it will only terminate
+ * with Breadth First Search (BFS) algorithm. But, for now, since we only use
+ * integer operations, we assume we are only working on integers.
+ *)
+let find_augmenting_path rg sc sk = 
+    (* Either dfs, bfs.
+     * They all respect the same output format for the resulting path *)
+    bfs rg sc sk
 
 
 let update_edge fn id1 id2 delta =

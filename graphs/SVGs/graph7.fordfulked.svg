@@ -39,7 +39,7 @@
 <title>4&#45;&gt;5</title>
 <path fill="none" stroke="black" d="M243.18,-148.96C249.03,-150.89 255.74,-152.82 262,-154 353.06,-171.12 377.43,-164.09 470,-168 480.02,-168.42 491.01,-168.67 500.71,-168.81"/>
 <polygon fill="black" stroke="black" points="500.95,-172.31 510.99,-168.93 501.03,-165.31 500.95,-172.31"/>
-<text text-anchor="middle" x="382" y="-169.8" font-family="Times,serif" font-size="14.00">0/1</text>
+<text text-anchor="middle" x="382" y="-169.8" font-family="Times,serif" font-size="14.00">1/1</text>
 </g>
 <!-- 3 -->
 <g id="node5" class="node">
@@ -52,7 +52,7 @@
 <title>2&#45;&gt;3</title>
 <path fill="none" stroke="black" d="M347.84,-94.62C363.81,-99.01 388.04,-105.66 406.58,-110.75"/>
 <polygon fill="black" stroke="black" points="405.9,-114.19 416.47,-113.46 407.75,-107.44 405.9,-114.19"/>
-<text text-anchor="middle" x="382" y="-111.8" font-family="Times,serif" font-size="14.00">0/26</text>
+<text text-anchor="middle" x="382" y="-111.8" font-family="Times,serif" font-size="14.00">1/26</text>
 </g>
 <!-- 1 -->
 <g id="node4" class="node">
@@ -65,7 +65,7 @@
 <title>1&#45;&gt;4</title>
 <path fill="none" stroke="black" d="M135.13,-79.5C141.65,-85.94 149.97,-93.73 158,-100 171.67,-110.68 188.05,-121.23 201.18,-129.2"/>
 <polygon fill="black" stroke="black" points="199.71,-132.4 210.09,-134.52 203.3,-126.39 199.71,-132.4"/>
-<text text-anchor="middle" x="174" y="-124.8" font-family="Times,serif" font-size="14.00">0/13</text>
+<text text-anchor="middle" x="174" y="-124.8" font-family="Times,serif" font-size="14.00">1/13</text>
 </g>
 <!-- 1&#45;&gt;2 -->
 <g id="edge3" class="edge">
@@ -79,7 +79,7 @@
 <title>1&#45;&gt;3</title>
 <path fill="none" stroke="black" d="M139.82,-63.36C177.86,-55.84 273.01,-41.06 348,-63 372.28,-70.1 396.12,-86.6 412.35,-99.69"/>
 <polygon fill="black" stroke="black" points="410.18,-102.44 420.1,-106.15 414.66,-97.06 410.18,-102.44"/>
-<text text-anchor="middle" x="278" y="-56.8" font-family="Times,serif" font-size="14.00">0/10</text>
+<text text-anchor="middle" x="278" y="-56.8" font-family="Times,serif" font-size="14.00">7/10</text>
 </g>
 <!-- 3&#45;&gt;4 -->
 <g id="edge9" class="edge">
@@ -93,7 +93,7 @@
 <title>3&#45;&gt;5</title>
 <path fill="none" stroke="black" d="M450.36,-126.42C464.98,-134.44 487.22,-146.64 504.15,-155.92"/>
 <polygon fill="black" stroke="black" points="502.48,-159 512.93,-160.74 505.84,-152.86 502.48,-159"/>
-<text text-anchor="middle" x="481.5" y="-152.8" font-family="Times,serif" font-size="14.00">0/8</text>
+<text text-anchor="middle" x="481.5" y="-152.8" font-family="Times,serif" font-size="14.00">8/8</text>
 </g>
 <!-- 0 -->
 <g id="node6" class="node">
@@ -106,14 +106,14 @@
 <title>0&#45;&gt;2</title>
 <path fill="none" stroke="black" d="M36.09,-15.54C81.36,-9.87 206.83,0.22 294,-47 302.15,-51.42 309.12,-58.6 314.65,-65.83"/>
 <polygon fill="black" stroke="black" points="311.88,-67.98 320.46,-74.2 317.63,-63.99 311.88,-67.98"/>
-<text text-anchor="middle" x="174" y="-19.8" font-family="Times,serif" font-size="14.00">0/1</text>
+<text text-anchor="middle" x="174" y="-19.8" font-family="Times,serif" font-size="14.00">1/1</text>
 </g>
 <!-- 0&#45;&gt;1 -->
 <g id="edge6" class="edge">
 <title>0&#45;&gt;1</title>
 <path fill="none" stroke="black" d="M34.49,-25.44C50.89,-33.32 77.02,-45.87 96.27,-55.12"/>
 <polygon fill="black" stroke="black" points="94.83,-58.31 105.36,-59.49 97.86,-52 94.83,-58.31"/>
-<text text-anchor="middle" x="70" y="-52.8" font-family="Times,serif" font-size="14.00">0/38</text>
+<text text-anchor="middle" x="70" y="-52.8" font-family="Times,serif" font-size="14.00">8/38</text>
 </g>
 </g>
 </svg>
