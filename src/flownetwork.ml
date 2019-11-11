@@ -137,7 +137,7 @@ let ford_fulkerson fn sc sk =
     else
     
     let rec loop fn = 
-    
+        (* Get the residual graph from the flow network *)    
         let residual_fn = get_residual_graph fn in
 
         try
