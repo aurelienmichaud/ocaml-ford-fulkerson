@@ -1,0 +1,50 @@
+### Starting build.
+# Target: src/ftest.ml.depends, tags: { extension:ml, file:src/ftest.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/ftest.ml > src/ftest.ml.depends
+# Target: src/ffile.mli.depends, tags: { extension:mli, file:src/ffile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/ffile.mli > src/ffile.mli.depends # cached
+# Target: src/flownetwork.mli.depends, tags: { extension:mli, file:src/flownetwork.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/flownetwork.mli > src/flownetwork.mli.depends # cached
+# Target: src/graph.mli.depends, tags: { extension:mli, file:src/graph.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/graph.mli > src/graph.mli.depends # cached
+# Target: src/graph.cmi, tags: { byte, compile, extension:mli, file:src/graph.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/graph.cmi src/graph.mli # cached
+# Target: src/flownetwork.cmi, tags: { byte, compile, extension:mli, file:src/flownetwork.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/flownetwork.cmi src/flownetwork.mli # cached
+# Target: src/ffile.cmi, tags: { byte, compile, extension:mli, file:src/ffile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/ffile.cmi src/ffile.mli # cached
+# Target: src/tools.mli.depends, tags: { extension:mli, file:src/tools.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/tools.mli > src/tools.mli.depends # cached
+# Target: src/tools.cmi, tags: { byte, compile, extension:mli, file:src/tools.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/tools.cmi src/tools.mli # cached
+# Target: src/ftest.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:src/ftest.cmo, file:src/ftest.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/ftest.cmo src/ftest.ml
+# Target: src/ffile.ml.depends, tags: { extension:ml, file:src/ffile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/ffile.ml > src/ffile.ml.depends # cached
+# Target: src/gfile.ml.depends, tags: { extension:ml, file:src/gfile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/gfile.ml > src/gfile.ml.depends # cached
+# Target: src/gfile.mli.depends, tags: { extension:mli, file:src/gfile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/gfile.mli > src/gfile.mli.depends # cached
+# Target: src/gfile.cmi, tags: { byte, compile, extension:mli, file:src/gfile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/gfile.cmi src/gfile.mli # cached
+# Target: src/graph.ml.depends, tags: { extension:ml, file:src/graph.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/graph.ml > src/graph.ml.depends # cached
+# Target: src/graph.cmx, tags: { compile, extension:cmx, extension:ml, file:src/graph.cmx, file:src/graph.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/graph.cmx src/graph.ml # cached
+# Target: src/gfile.cmx, tags: { compile, extension:cmx, extension:ml, file:src/gfile.cmx, file:src/gfile.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/gfile.cmx src/gfile.ml # cached
+# Target: src/tools.ml.depends, tags: { extension:ml, file:src/tools.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/tools.ml > src/tools.ml.depends # cached
+# Target: src/tools.cmx, tags: { compile, extension:cmx, extension:ml, file:src/tools.cmx, file:src/tools.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/tools.cmx src/tools.ml # cached
+# Target: src/flownetwork.ml.depends, tags: { extension:ml, file:src/flownetwork.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/flownetwork.ml > src/flownetwork.ml.depends # cached
+# Target: src/flownetwork.cmx, tags: { compile, extension:cmx, extension:ml, file:src/flownetwork.cmx, file:src/flownetwork.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/flownetwork.cmx src/flownetwork.ml # cached
+# Target: src/ffile.cmx, tags: { compile, extension:cmx, extension:ml, file:src/ffile.cmx, file:src/ffile.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/ffile.cmx src/ffile.ml # cached
+# Target: src/ftest.cmx, tags: { compile, extension:cmx, extension:ml, file:src/ftest.cmx, file:src/ftest.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/ftest.cmx src/ftest.ml
+# Target: src/ftest.native, tags: { dont_link_with, extension:native, file:src/ftest.native, link, native, ocaml, program, quiet }
+/usr/bin/ocamlopt.opt -I src src/graph.cmx src/tools.cmx src/flownetwork.cmx src/gfile.cmx src/ffile.cmx src/ftest.cmx -o src/ftest.native
+# Compilation successful.
