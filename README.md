@@ -1,5 +1,7 @@
 # ocaml-ford-fulkerson
 
+ - fordfulk: automated bash script to make, run ftest bytecode executable AND export the graphs into svg format
+
 ## src Directory
 
  - graph: Graphs implementation.
