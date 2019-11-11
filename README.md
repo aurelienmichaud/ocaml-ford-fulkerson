@@ -23,7 +23,7 @@ cd ./graphs && ./tosvg
 ```
 
 	
-## graph/SVGs Directory
+## graphs/SVGs Directory
 
 All svg files representing the graphs. You can then have a nice display of all the graphs by executing
 
