@@ -1,0 +1,51 @@
+#!/bin/bash
+
+progname="fordfulk"
+
+if [ ! "$#" -eq 3 ]; then
+	echo "$progname Graph_path Source_node_id Sink_node_id"
+	echo "\t\tOR"
+	echo "$progname Graph_path Source_node_id Sink_node_id Output_graph_path"
+	echo "If you want the output_file to be auto generated with the same path"
+	exit 1
+fi
+
+make > /dev/null
+
+if [ ! "$?" -eq 0 ]; then
+	echo "[!] Error with make"
+	exit 1
+fi
+
+if [ ! -f "$1" ] || [ ! -r "$1" ] ; then
+	echo "'$1' not a regular file or not readable"	
+fi
+
+# Fetch the bytecode executable
+elf_prog=$(ls -A1 | grep ftest)
+
+if [ "$#" -eq 4 ]; then
+	./$elf_prog "$1" "$2" "$3" "$4"
+else
+	./$elf_prog "$1" "$2" "$3" "$1.fordfulked"
+fi
+
+
+if [ ! "$?" -eq 0 ]; then
+	echo "[!] Error with '$elf_prog'"
+	exit 1
+fi
+
+# Export the two graphs in SVG format with dot command
+
+inputfilename=$(echo $1 | sed -r "s/.*\/([^/]*$)/\1/g")
+
+dot -Tsvg "$1.dot" > "./graphs/SVGs/$inputfilename.svg"
+if [ "$#" -eq 4 ]; then
+	outputfilename=$(echo $4 | sed -r "s/.*\/([^/]*$)/\1/g")
+	dot -Tsvg "$4.dot" > "./graphs/SVGs/$outputfilename.svg"
+else
+	dot -Tsvg "$1.fordfulked.dot" > "./graphs/SVGs/$inputfilename.fordfulked.svg"
+fi
+		
+

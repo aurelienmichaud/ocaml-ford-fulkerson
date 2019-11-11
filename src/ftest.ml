@@ -2,8 +2,8 @@ open Ffile
 open Tools
 open Flownetwork
 
-let testit g =
-    ford_fulkerson g 0 7
+let testit g source sink =
+    ford_fulkerson g source sink
 
 let () =
 
@@ -29,13 +29,16 @@ let () =
 
     (* TEST CODE HERE *)
 
-    let new_graph = testit graph in
+    let new_graph = testit graph _source _sink in
 
     (* END OF TEST CODE HERE *)
 
     (* Rewrite the graph that has been read. *)
     (*let () = write_file outfile new_graph in*)
 
+    (* Export the infile graph as a SVG file to get a reference to look at *)
+    let () = export infile graph in
+    (* Export the new graph in SVG format in the same shape as the reference graph *)
     let () = export_same_shape outfile graph new_graph in
 
     ()
