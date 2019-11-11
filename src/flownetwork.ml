@@ -70,9 +70,13 @@ exception Found_Augmenting_Path of (((id * direction) list) * int)
  * So 'Same direction means we will increase by +delta, 
  * and 'Opposite' direction by -delta.
  * The direction of the first pair (id, direction) doesn't matter
+
+ * Keep in mind that with floating capacities and flows, it will only terminate
+ * with Breadth First Search (BFS) algorithm. But, for now, since we only use
+ * integer operations, we assume we are only working on integers.
  *)
 let find_augmenting_path rg sc sk = 
-    (* Depth First Search *)
+    (* === Depth First Search === *)
     let rec dfs acc delta visited = function
         | []            -> visited
         | (id, (residual_flow, direction))::t  -> 
@@ -96,7 +100,33 @@ let find_augmenting_path rg sc sk =
                 dfs acc delta new_visited t
         
     in
-    dfs [(sc, Same)] 0 [sc] (out_arcs rg sc)
+
+    (* === Breadth First Search === *)
+    let rec bfs acc delta visited = function
+        | []    -> visited
+        | (id, (residual_flow, direction))::t ->
+            if id = sk then
+                let delta = if residual_flow < delta || delta = 0 then residual_flow else delta in
+                raise (Found_Augmenting_Path (List.rev ((sk, direction)::acc), delta))
+    
+            (* We already visited that node, so we ignore it and parse the other out_arcs provided in the list *)
+            else if List.mem id visited then
+                bfs acc delta visited t
+
+            (* We need to parse the rest 't' of the list, since we use Breadth First Search (BFS) *)
+            else
+                let new_visited =
+                    bfs acc delta (id::visited) t
+                in
+                if residual_flow < delta || delta = 0 then
+                    bfs ((id, direction)::acc) residual_flow new_visited (out_arcs rg id)
+                else
+                    bfs ((id, direction)::acc) delta new_visited (out_arcs rg id)
+
+    in
+
+    bfs [(sc, Same)] 0 [sc] (out_arcs rg sc)
+
 
 let update_edge fn id1 id2 delta =
     match find_arc fn id1 id2 with 
