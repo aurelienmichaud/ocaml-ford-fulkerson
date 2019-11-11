@@ -20,3 +20,9 @@ let export path flownet =
     let string_flownet = gmap flownet (fun (f, c) -> (string_of_int f) ^ "/" ^ (string_of_int c)) in
     Gfile.export path string_flownet
 
+let export_same_shape path flownet_from flownet_to =
+    let string_flownet_from = gmap flownet_from (fun (f, c) -> (string_of_int f) ^ "/" ^ (string_of_int c)) in
+    let string_flownet_to = gmap flownet_to (fun (f, c) -> (string_of_int f) ^ "/" ^ (string_of_int c)) in
+    Gfile.export_same_shape path string_flownet_from string_flownet_to
+  
+

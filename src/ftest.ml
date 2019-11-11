@@ -36,7 +36,7 @@ let () =
     (* Rewrite the graph that has been read. *)
     (*let () = write_file outfile new_graph in*)
 
-    let () = export outfile new_graph in
+    let () = export_same_shape outfile graph new_graph in
 
     ()
 

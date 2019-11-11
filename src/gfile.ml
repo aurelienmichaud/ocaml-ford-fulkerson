@@ -7,8 +7,7 @@ type path = string
    % This is a comment
 
    % A node with its coordinates (which are not used).
-   n 88.8 209.7
-   n 408.9 183.0
+   n 88.8 209.7 n 408.9 183.0
 
    % The first node has id 0, the next is 1, and so on.
 
@@ -110,3 +109,44 @@ let export path graph =
   
   close_out ff ;
   ()
+
+(* This function exports the graph 'graph_to' with the same shape as 'graph_from'
+ *
+ * For example, we read the graph 'graph_from' from a file, we apply some functions
+ * on it (for instance ford-fulkerson) and we get a final graph 'graph_to'.
+ *
+ * We wrote that function because the function 'export' exports the graph dealing
+ * with the function 'e_iter' which yields all the arcs but most of the time in a 
+ * different order than it would do with the starting graph 'graph_from'
+ * So when displaying the two graphs in svg format, the shapes of these two graphs
+ * would be different, and it would be harder to see the differences between the two *)
+
+let export_same_shape path graph_from graph_to = 
+
+  (* Open a write-file. *)
+  let ff = open_out (path ^ ".dot") in
+
+  fprintf ff "digraph finite_state_machine {\n" ;
+  fprintf ff "\trankdir=LR;\n" ;
+  fprintf ff "\tnode [shape = circle];\n" ;
+
+  let get_lbl id1 id2 lbl = 
+    try
+      match find_arc graph_to id1 id2 with
+      | None                  -> ()
+      | Some lbl -> fprintf ff "\t%d -> %d [ label = \"%s\" ];\n" id1 id2 lbl
+    with Graph_error s  -> ()
+  in
+
+  (* Write all arcs *)
+  e_iter graph_from get_lbl ;
+  
+  fprintf ff "}\n" ;
+  
+  close_out ff ;
+  ()
+    
+
+
+
+
