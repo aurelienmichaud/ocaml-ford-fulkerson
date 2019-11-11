@@ -1,12 +1,13 @@
 #!/bin/bash
 
 progname="fordfulk"
+output_extension="fordfulked"
 
 if [ ! "$#" -eq 3 ]; then
 	echo "$progname Graph_path Source_node_id Sink_node_id"
 	echo "\t\tOR"
 	echo "$progname Graph_path Source_node_id Sink_node_id Output_graph_path"
-	echo "If you want the output_file to be auto generated with the same path"
+	echo "If you want the output_file to be auto generated with the same path.$output_extension"
 	exit 1
 fi
 
@@ -27,7 +28,7 @@ elf_prog=$(ls -A1 | grep ftest)
 if [ "$#" -eq 4 ]; then
 	./$elf_prog "$1" "$2" "$3" "$4"
 else
-	./$elf_prog "$1" "$2" "$3" "$1.fordfulked"
+	./$elf_prog "$1" "$2" "$3" "$1.$output_extension"
 fi
 
 
@@ -45,7 +46,8 @@ if [ "$#" -eq 4 ]; then
 	outputfilename=$(echo $4 | sed -r "s/.*\/([^/]*$)/\1/g")
 	dot -Tsvg "$4.dot" > "./graphs/SVGs/$outputfilename.svg"
 else
-	dot -Tsvg "$1.fordfulked.dot" > "./graphs/SVGs/$inputfilename.fordfulked.svg"
+	dot -Tsvg "$1.$output_extension.dot" > "./graphs/SVGs/$inputfilename.$output_extension.svg"
 fi
 		
+rm -f ./graphs/*.dot
 
