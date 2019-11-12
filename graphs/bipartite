@@ -1,6 +1,24 @@
-
-
+#Current file format
 2,3=4,5,6
 1=7
 1,2,3=8,9
+
+#Expected File format
+
+Sport:Capacity
+
+Badminton:20
+
+
+Name[,Name,...]=Sport[,Sport,...]
+
+Dupont,Bertrand,Charlie=Badminton,Foot
+
+
+#Hashtbl conversion
+
+Name:id
+
+Dupont:1
+
 
