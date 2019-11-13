@@ -1,19 +1,13 @@
-#Expected File format
+%Expected File format
 
 Badminton:20
 Football:3
-Karate:5:
+Karate:5
+Natation:2
 
 
-Name[,Name,...]=Sport[,Sport,...]
-
-Dupont,Bertrand,Charlie=Badminton,Foot
-
-
-#Hashtbl conversion
-
-Name:id
-
-Dupont:1
+Dupont,Bertrand,Charlie=Badminton,Football
+Bertrand=Karate
+Charlie=Natation
 
 

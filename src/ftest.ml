@@ -1,10 +1,11 @@
 open Ffile
 open Tools
-open Flownetwork
+open Bipartite
 (*open Bfile*)
 
 let testit g source sink =
-    ford_fulkerson g source sink
+    (*ford_fulkerson g source sink*)
+    solve g
 
 let () =
 

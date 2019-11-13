@@ -19,6 +19,13 @@ let read_capacity_line n graph hashtbl name capacity =
 
     let (n, sink_id) = get_id hashtbl n "__sink__" in
 
+    (* Add name to the graph if it doesn't exist *)
+    let graph =
+        try
+            new_node graph name_id
+        with (Graph_error (e)) -> graph
+    in
+
     (n, new_arc graph name_id sink_id (0, int_of_string capacity))
 
 (* weight is not used for now *)
@@ -29,11 +36,21 @@ let read_connection_line n graph hashtbl weight froms tos =
     let froms = String.split_on_char ',' froms in
     let tos = String.split_on_char ',' tos in
 
+    let (n, source_id) = get_id hashtbl n "__source__" in
+    let (n, sink_id) = get_id hashtbl n "__sink__" in
+
     (* Buggy but i need to go to sport class, so i'll see tonight *)
     let rec link_to graph n from_id = function
         | []    -> (n, graph)
         | h::t  -> 
             let (n, h_id) = get_id hashtbl n h in
+            (* Add h to the graph if it doesn't exist *)
+            let graph =
+                try
+                    new_node graph h_id
+                with (Graph_error (e)) -> graph
+            in
+            (* Add arc from_id -> h_id *)
             link_to
                 (new_arc graph from_id h_id (0, 1))
                 n
@@ -45,12 +62,39 @@ let read_connection_line n graph hashtbl weight froms tos =
     let rec link_all graph n = function
         | []    -> (n, graph)
         | h::t  -> 
+            (* Fetch 'h' 's id in the hash table *)
             let (n, from_id) = get_id hashtbl n h in
+            (* Add h to the graph if it doesn't exist *)
+            let graph =
+                try
+                    new_node graph from_id
+                with (Graph_error (e)) -> graph
+            in
+            (* Add arc from source node to 'h' node *)
+            let graph = new_arc graph source_id from_id (0, 1) in
+
             let (n, new_graph) = link_to graph n from_id tos in
             link_all new_graph n t
     in
 
-    link_all graph n froms
+    
+    let (n, graph) = link_all graph n froms in
+
+    (* Link all the right column of the bipartite problem with the sink node *)
+    let (n, graph) =
+        List.fold_left
+        (fun (n,gr) t -> 
+            let (n, t_id) = get_id hashtbl n t in
+            try
+                match find_arc gr t_id sink_id with
+                    | None  -> (n, new_arc gr t_id sink_id (0, 1))
+                    | _ -> (n, gr)
+
+            with (Graph_error (e)) -> (n, new_arc gr t_id sink_id (0, 1)))
+        (n, graph)
+        tos
+    in
+    (n, graph)
      
 
 
