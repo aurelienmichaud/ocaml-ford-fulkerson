@@ -38,7 +38,7 @@ let () =
     (*let () = write_file outfile new_graph in*)
 
     (* Export the infile graph as a SVG file to get a reference to look at *)
-    let () = Ffile.export outfile graph  in
+    let () = Ffile.export infile graph  in
     (* Export the new graph in SVG format in the same shape as the reference graph *)
     let () = Bfile.export new_graph infile outfile in
 

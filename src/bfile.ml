@@ -218,7 +218,7 @@ let export bg input_path output_path =
     fprintf output_file "\tnode [shape = circle];\n";
 
     e_iter bg (fun id1 id2 (flow,capacity) -> 
-                if flow <> 0 then                
+                if flow <> 0 && id1 <> 9998 && id2 <> 9999 then                
                     let name1 = Hashtbl.find hashtbl (string_of_int id1) in
                     let name2 = Hashtbl.find hashtbl (string_of_int id2) in
                     fprintf output_file "\t%s -> %s [ label = \"\" ];\n" name1 name2 

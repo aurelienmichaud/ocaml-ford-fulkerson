@@ -1,17 +1,19 @@
-%Expected File format
-
+%Sports
 Badminton:20
 Football:3
 Karate:5
 Natation:2
 Dance:10
+Basketball:10
 
-
+%Students
 Dupont,Bertrand,Charlie=Badminton,Football
 Bertrand=Karate
 2|Charlie=Natation, Cricket,Volley
 Anasthasia,Caroline=Cricket,Basketball
 1|Clotilde=Dance
 3|Gatwick,Laurent,Bernard=Gym
+1| Aurelien, Martin, Mael, Axel=Basketball
+2| Aurelien, Kilian, Maxence, Carole=Volley
 
 
