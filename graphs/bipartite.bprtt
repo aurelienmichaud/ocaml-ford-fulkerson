@@ -1,4 +1,5 @@
 %Sports
+
 Badminton:20
 Football:3
 Karate:5
@@ -13,7 +14,9 @@ Bertrand=Karate
 Anasthasia,Caroline=Cricket,Basketball
 1|Clotilde=Dance
 3|Gatwick,Laurent,Bernard=Gym
-1| Aurelien, Martin, Mael, Axel=Basketball
+1| Aurelien, Martin, Mael, Axel = Basketball
 2| Aurelien, Kilian, Maxence, Carole=Volley
+Florian, Angele=Natation
+4|Alexis,Floriane,Basil=Karate
 
 

@@ -1,11 +1,41 @@
-open Ffile
 open Tools
 open Bipartite
+open Flownetwork
 (*open Bfile*)
 
-let testit g source sink =
-    (*ford_fulkerson g source sink*)
-    solve g
+let handle_default infile outfile =
+    Printf.printf "Default behaviour : export graph into .dot format\n%!";
+    let graph = Gfile.from_file infile in
+    let () = Gfile.export outfile graph in
+    Printf.printf "Done.\n%!";
+    ()
+
+let handle_bipartite infile outfile =
+    Printf.printf "Bipartite Graph solver\n%!";
+    (* Open file *)
+    let graph = Bfile.from_file infile in
+
+    let new_graph = solve graph in
+
+    (* Export the infile graph as a SVG file to get a reference to look at *)
+    let () = Ffile.export infile graph  in
+    (* Export the new graph in SVG format in the same shape as the reference graph *)
+    let () = Bfile.export new_graph infile outfile in
+    Printf.printf "Done.\n%!";
+    ()
+
+let handle_ford_fulkerson infile outfile source sink =
+    Printf.printf "Flow Network solver\n%!";
+    let graph = Ffile.from_file infile in
+
+    let new_graph = ford_fulkerson graph source sink in
+
+    (* Export the infile graph as a SVG file to get a reference to look at *)
+    let () = Ffile.export infile graph  in
+    (* Export the new graph in SVG format in the same shape as the reference graph *)
+    let () = Ffile.export_same_shape outfile graph new_graph in
+    Printf.printf "Done.\n%!";
+    ()
 
 let () =
 
@@ -26,21 +56,12 @@ let () =
     and _sink = int_of_string Sys.argv.(3)
     in
 
-    (* Open file *)
-    let graph = Bfile.from_file infile in
+    (* Check the input file extension *)
+    match (List.rev (String.split_on_char '.' infile)) with
+        | "bprtt"::t    -> handle_bipartite infile outfile;
+        | "flwnt"::t    -> handle_ford_fulkerson infile outfile _source _sink;
+        | _             -> handle_default infile outfile;
 
-    (* TEST CODE HERE *)
-
-    let new_graph = testit graph _source _sink in
-
-    (* END OF TEST CODE HERE *) 
-    (* Rewrite the graph that has been read. *)
-    (*let () = write_file outfile new_graph in*)
-
-    (* Export the infile graph as a SVG file to get a reference to look at *)
-    let () = Ffile.export infile graph  in
-    (* Export the new graph in SVG format in the same shape as the reference graph *)
-    let () = Bfile.export new_graph infile outfile in
 
     ()
 
