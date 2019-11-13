@@ -1,13 +1,8 @@
-#Current file format
-2,3=4,5,6
-1=7
-1,2,3=8,9
-
 #Expected File format
 
-Sport:Capacity
-
 Badminton:20
+Football:3
+Karate:5:
 
 
 Name[,Name,...]=Sport[,Sport,...]
