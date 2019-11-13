@@ -4,10 +4,14 @@ Badminton:20
 Football:3
 Karate:5
 Natation:2
+Dance:10
 
 
 Dupont,Bertrand,Charlie=Badminton,Football
 Bertrand=Karate
-Charlie=Natation
+2|Charlie=Natation, Cricket,Volley
+Anasthasia,Caroline=Cricket,Basketball
+1|Clotilde=Dance
+3|Gatwick,Laurent,Bernard=Gym
 
 

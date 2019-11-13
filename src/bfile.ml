@@ -1,9 +1,11 @@
+open Printf
 open Graph
 open Tools
 
 type path = string
 
 let get_id hashtbl n name =
+    let name = String.trim name in
     try
         (n, Hashtbl.find hashtbl name)
     with Not_found  -> 
@@ -178,4 +180,14 @@ let from_file path =
     let final_graph = loop 0 base_graph in
     
     close_in infile;
+
+    let hashtbl_file = open_out (path ^ "._translate") in
+
+    Hashtbl.iter
+    (fun name id -> 
+        fprintf hashtbl_file "%s:%d\n" name id)
+    hashtbl;
+
+    close_out hashtbl_file;
+
     final_graph;
