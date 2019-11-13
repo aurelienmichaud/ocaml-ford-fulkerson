@@ -1,6 +1,7 @@
 open Ffile
 open Tools
 open Flownetwork
+open Bfile
 
 let testit g source sink =
     ford_fulkerson g source sink

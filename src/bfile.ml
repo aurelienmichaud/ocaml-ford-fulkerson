@@ -3,24 +3,53 @@ open Tools
 
 type path = string
 
+let get_id hashtbl n name =
+    try
+        (n, Hashtbl.find hashtbl name)
+    with Not_found  -> 
+        Hashtbl.add hashtbl name (n+1);
+        (n+1, n+1)
+        
 
 let read_capacity_line n graph hashtbl name capacity = 
   
     (* If the name is already in the Hashtbl, we update it 
      * If not, we add it to the hashtbl *)
-    let name_id =
-        if Hashtbl.mem hashtbl name then Hashtbl.find hashtbl name
-        else Hashtbl.add hashtbl name n; n
-    in
+    let (n, name_id) = get_id hashtbl n name in
 
-    let sink_id = Hashtbl.find "__sink__" in
+    let (n, sink_id) = get_id hashtbl n "__sink__" in
 
-    new_arc graph name_id sink_id (0, int_of_string capacity)
+    (n, new_arc graph name_id sink_id (0, int_of_string capacity))
 
 (* weight is not used for now *)
 let read_connection_line n graph hashtbl weight froms tos = 
 
-      
+    let weight = int_of_string weight in
+
+    let froms = String.split_on_char ',' froms in
+    let tos = String.split_on_char ',' tos in
+
+    (* Buggy but i need to go to sport class, so i'll see tonight *)
+    let rec link_to graph n from_id = function
+        | []    -> (n, graph)
+        | h::t  -> 
+            let (n, h_id) = get_id hashtbl n h in
+            link_to
+                new_arc graph from_id h_id (0, 1)
+                n
+                from_id
+    in
+
+
+    let rec link_all graph n = function
+        | []    -> (n, graph)
+        | h::t  -> 
+            let (n, from_id) = get_id hashtbl n h in
+            let (n, new_graph) = link_to graph n from_id tos in
+            link_all new_graph n t
+    in
+
+    link_all graph n froms
      
 
 
