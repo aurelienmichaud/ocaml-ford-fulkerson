@@ -15,8 +15,7 @@ let handle_bipartite infile outfile =
 
     (* Export the infile graph as a SVG file to get a reference to look at *)
     let () = Wffile.export infile graph  in
-    (* Export the new graph with the translation file made by Bfile.from_file.
-     * Hence we need to provide the infile path too *)
+    (* Export the new graph in SVG format in the same shape as the reference graph *)
     let () = Bfile.export new_graph infile outfile in
     Printf.printf "Done.\n%!";
     ()
@@ -36,7 +35,7 @@ let handle_ford_fulkerson infile outfile source sink =
 
 let () =
 
-    (* Check the number of command-line arguments *)
+(* Check the number of command-line arguments *)
     if Array.length Sys.argv <> 5 then
     begin
         Printf.printf "\nUsage: %s infile source sink outfile\n\n%!" Sys.argv.(0) ;
