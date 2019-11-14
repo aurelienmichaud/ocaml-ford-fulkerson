@@ -1,7 +1,5 @@
-(*open Flownetwork*)
 open Weighedflownetwork
 
-(* bg : bipartite graph
- * b:*)
-let solve bg = Weighedflownetwork.ford_fulkerson bg 9998 9999
+(* bg : bipartite graph, basically a weighed flow network *)
+let solve bg = Weighedflownetwork.max_flow_min_cost bg 9998 9999
 

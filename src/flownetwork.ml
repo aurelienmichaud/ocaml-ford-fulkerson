@@ -189,6 +189,7 @@ let ford_fulkerson fn sc sk =
     loop fn
 
     
+let max_flow fn sc sk = ford_fulkerson fn sc sk
 
 
 

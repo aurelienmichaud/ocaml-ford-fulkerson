@@ -1,9 +1,3 @@
-open Tools
-open Graph
-open Bipartite
-open Flownetwork
-open Weighedflownetwork
-(*open Bfile*)
 
 let handle_default infile outfile =
     Printf.printf "Default behaviour : export graph into .dot format\n%!";

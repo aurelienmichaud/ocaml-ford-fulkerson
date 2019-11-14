@@ -224,7 +224,7 @@ let rec update_flow_network fn delta = function
         | Opposite  -> update_flow_network (update_edge fn id1 id2 (-delta)) delta tail
 
 
-(* Ford-Fulkerson Algorithm on flow networks
+(* Busacker-Gowen Algorithm on weighed flow networks
 
  * fn : flownetwork
  * sc: Source node, the node we begin our research from
@@ -238,28 +238,28 @@ let rec update_flow_network fn delta = function
  *      - Update the flow network with that bottleneck capacity in the augmenting path
 
  *)
-let ford_fulkerson fn sc sk = 
+let busacker_gowen wfn sc sk = 
     (* Check whether the start node or the end node does not exist *)
-    if (not (node_exists fn sc)) || (not (node_exists fn sk)) then
+    if (not (node_exists wfn sc)) || (not (node_exists wfn sk)) then
         raise (Graph_error ("Source node and/or Sink node do/es not exist in flow network"))
     else
     
     let rec loop fn = 
         (* Get the residual graph from the flow network *)    
-        let residual_fn = get_residual_graph fn in
+        let residual_fn = get_residual_graph wfn in
 
         try
             (* Find an augmenting path in the residual graph *)
             let _ = find_augmenting_path residual_fn sc sk in
             (* If no exception is raised, then we finished the algorithm *)
-            fn
+            wfn
         (* If we found such a path, update the flow network with the bottleneck capacity delta
          * and do it all again *)
-        with (Found_Augmenting_Path (path, delta))  -> loop (update_flow_network fn delta path)
+        with (Found_Augmenting_Path (path, delta))  -> loop (update_flow_network wfn delta path)
     in
-    loop fn
+    loop wfn
 
-    
+let max_flow_min_cost wfn sc sk = busacker_gowen wfn sc sk
 
 
 
