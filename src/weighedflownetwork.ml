@@ -71,25 +71,25 @@ let bellman_ford rg sc sk =
         | []    -> visiting_node_id :: visited
         | (id, (residual_flow, weight, direction)) :: t ->
 
-            let (predecessor_weight, _) = Hashtbl.find hashtbl visiting_node_id in
-
-            begin
-                try
-                    let (node_weight, predecessor) = Hashtbl.find hashtbl id in
-                    
-                    if node_weight > predecessor_weight + weight then
-                        Hashtbl.replace hashtbl id (predecessor_weight + weight, visiting_node_id)
-                    else ()
-        
-                with Not_found ->
-                        Hashtbl.add hashtbl id (predecessor_weight + weight, visiting_node_id)
-            end;
-
-            let new_visited =
-                    _bellman_ford visiting_node_id (id::visited) t
-            in
-                 
             if not (List.mem id visited) then
+                let (predecessor_weight, _) = Hashtbl.find hashtbl visiting_node_id in
+
+                begin
+                    try
+                        let (node_weight, predecessor) = Hashtbl.find hashtbl id in
+                        
+                        if node_weight > predecessor_weight + weight then
+                            Hashtbl.replace hashtbl id (predecessor_weight + weight, visiting_node_id)
+                        else ()
+            
+                    with Not_found ->
+                            Hashtbl.add hashtbl id (predecessor_weight + weight, visiting_node_id)
+                end;
+
+                let new_visited =
+                        _bellman_ford visiting_node_id (id::visited) t
+                in
+                 
                 _bellman_ford id new_visited (out_arcs rg id)
             else
                 visited

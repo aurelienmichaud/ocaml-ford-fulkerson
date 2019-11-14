@@ -1,23 +1,23 @@
 digraph finite_state_machine {
 	rankdir=LR;
 	node [shape = circle];
-	Floriane -> Karate [ label = "4" ];
-	Floriane -> Skateboard [ label = "0" ];
-	Floriane -> Natation [ label = "0" ];
-	Florian -> Natation [ label = "0" ];
-	Bernard -> Gym [ label = "3" ];
-	Carole -> Volley [ label = "2" ];
+	Charlie -> Cricket [ label = "2" ];
+	Anasthasia -> Basketball [ label = "0" ];
+	Caroline -> Basketball [ label = "0" ];
 	Clotilde -> Dance [ label = "1" ];
+	Bernard -> Gym [ label = "3" ];
 	Martin -> Basketball [ label = "1" ];
 	Mael -> Basketball [ label = "1" ];
 	Axel -> Basketball [ label = "1" ];
 	Aurelien -> Basketball [ label = "1" ];
-	Anasthasia -> Basketball [ label = "0" ];
-	Dupont -> Football [ label = "0" ];
-	Bertrand -> Football [ label = "0" ];
-	Charlie -> Football [ label = "0" ];
-	Caroline -> Cricket [ label = "0" ];
+	Carole -> Volley [ label = "2" ];
+	Floriane -> Skateboard [ label = "0" ];
+	Floriane -> Natation [ label = "0" ];
+	Florian -> Natation [ label = "0" ];
+	Basil -> Karate [ label = "4" ];
+	Basil -> Natation [ label = "0" ];
 	Angele -> Natation [ label = "0" ];
 	Alexis -> Athletisme [ label = "0" ];
-	Basil -> Natation [ label = "0" ];
+	Dupont -> Karate [ label = "4" ];
+	Bertrand -> Karate [ label = "4" ];
 }
