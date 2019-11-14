@@ -27,7 +27,7 @@ let read_capacity_line n graph hashtbl name capacity =
         with (Graph_error (e)) -> graph
     in
 
-    (n, new_arc graph name_id sink_id (0, int_of_string capacity))
+    (n, new_arc graph name_id sink_id (0, int_of_string capacity, 1))
 
 (* weight is not used for now *)
 let read_connection_line n graph hashtbl weight froms tos = 
@@ -53,7 +53,7 @@ let read_connection_line n graph hashtbl weight froms tos =
             in
             (* Add arc from_id -> h_id *)
             link_to
-                (new_arc graph from_id h_id (0, 1))
+                (new_arc graph from_id h_id (0, 1, weight))
                 n
                 from_id
                 t
@@ -72,7 +72,7 @@ let read_connection_line n graph hashtbl weight froms tos =
                 with (Graph_error (e)) -> graph
             in
             (* Add arc from source node to 'h' node *)
-            let graph = new_arc graph source_id from_id (0, 1) in
+            let graph = new_arc graph source_id from_id (0, 1, 1) in
 
             let (n, new_graph) = link_to graph n from_id tos in
             link_all new_graph n t
@@ -88,10 +88,10 @@ let read_connection_line n graph hashtbl weight froms tos =
             let (n, t_id) = get_id hashtbl n t in
             try
                 match find_arc gr t_id sink_id with
-                    | None  -> (n, new_arc gr t_id sink_id (0, 1))
+                    | None  -> (n, new_arc gr t_id sink_id (0, 1, 1))
                     | _ -> (n, gr)
 
-            with (Graph_error (e)) -> (n, new_arc gr t_id sink_id (0, 1)))
+            with (Graph_error (e)) -> (n, new_arc gr t_id sink_id (0, 1, 1)))
         (n, graph)
         tos
     in
@@ -217,11 +217,11 @@ let export bg input_path output_path =
     fprintf output_file "\trankdir=LR;\n";
     fprintf output_file "\tnode [shape = circle];\n";
 
-    e_iter bg (fun id1 id2 (flow,capacity) -> 
+    e_iter bg (fun id1 id2 (flow,capacity, weight) -> 
                 if flow <> 0 && id1 <> 9998 && id2 <> 9999 then                
                     let name1 = Hashtbl.find hashtbl (string_of_int id1) in
                     let name2 = Hashtbl.find hashtbl (string_of_int id2) in
-                    fprintf output_file "\t%s -> %s [ label = \"\" ];\n" name1 name2 
+                    fprintf output_file "\t%s -> %s [ label = \"%d\" ];\n" name1 name2 weight
                 else ());
 
 

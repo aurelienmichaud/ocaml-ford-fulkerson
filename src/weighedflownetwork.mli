@@ -8,5 +8,6 @@ type edge = flow * capacity * weight
 
 type weighedflownetwork = edge graph
 
-val busacker_gowen: weighedflownetwork -> id -> id -> weighedflownetwork
+(*val busacker_gowen: weighedflownetwork -> id -> id -> weighedflownetwork*)
+val ford_fulkerson: weighedflownetwork -> id -> id -> weighedflownetwork
 

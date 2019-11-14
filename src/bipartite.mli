@@ -1,4 +1,5 @@
-open Flownetwork
+(*open Flownetwork*)
+open Weighedflownetwork
 
-val solve: flownetwork -> flownetwork
+val solve: weighedflownetwork -> weighedflownetwork
 

@@ -1,4 +1,5 @@
-open Flownetwork
+(*open Flownetwork*)
+open Weighedflownetwork
 
 (* bg : bipartite graph
  * b:*)

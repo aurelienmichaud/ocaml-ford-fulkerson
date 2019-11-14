@@ -1,6 +1,7 @@
 open Tools
 open Bipartite
 open Flownetwork
+open Weighedflownetwork
 (*open Bfile*)
 
 let handle_default infile outfile =
@@ -15,10 +16,10 @@ let handle_bipartite infile outfile =
     (* Open file *)
     let graph = Bfile.from_file infile in
 
-    let new_graph = solve graph in
+    let new_graph = Bipartite.solve graph in
 
     (* Export the infile graph as a SVG file to get a reference to look at *)
-    let () = Ffile.export infile graph  in
+    (*let () = Ffile.export infile graph  in*)
     (* Export the new graph in SVG format in the same shape as the reference graph *)
     let () = Bfile.export new_graph infile outfile in
     Printf.printf "Done.\n%!";
@@ -28,7 +29,7 @@ let handle_ford_fulkerson infile outfile source sink =
     Printf.printf "Flow Network solver\n%!";
     let graph = Ffile.from_file infile in
 
-    let new_graph = ford_fulkerson graph source sink in
+    let new_graph = Flownetwork.ford_fulkerson graph source sink in
 
     (* Export the infile graph as a SVG file to get a reference to look at *)
     let () = Ffile.export infile graph  in

@@ -35,7 +35,7 @@ let update fn id1 id2 flow =
 *)
 
 type direction = Same | Opposite
-type residual_graph = (flow * direction) graph
+type residual_graph = (flow * weight * direction) graph
 
 exception Found_Augmenting_Path of (((id * direction) list) * int)
 
@@ -61,6 +61,9 @@ let get_residual_graph fn =
 let bellman_ford rg sc sk =
 
     let hashtbl = Hashtbl.create 100 in
+    (* Insert the source node in the hash table with a weight of 0 and
+     * itself as its predecessor to start the algorithm *)
+    Hashtbl.add hashtbl sc (0, sc);
 
     let rec _bellman_ford visiting_node_id visited = function
         | []    -> visiting_node_id :: visited
@@ -71,27 +74,46 @@ let bellman_ford rg sc sk =
             begin
                 try
                     let (node_weight, predecessor) = Hashtbl.find hashtbl id in
-                    begin
-                        if node_weight > predecessor_weight + weight then
-                            Hashtbl.replace hashtbl id (predessor_weight+weight, visiting_node_id);
-                        else ()
-                    end
-
                     
+                    if node_weight > predecessor_weight + weight then
+                        Hashtbl.replace hashtbl id (predecessor_weight+weight, visiting_node_id)
+                    else ()
         
-                with Not_found -> 
-                    Hashtbl.add hashtbl id (predessor_weight + weight);
-            end
+                with Not_found ->
+                    begin 
+                        Hashtbl.add hashtbl id (predecessor_weight + weight, visiting_node_id)
+                    end
+            end;
 
             let new_visited =
-                    _bellman_ford visiting_node visited t
+                    _bellman_ford visiting_node_id (id::visited) t
             in
 
             _bellman_ford id new_visited (out_arcs rg id)
     in
-    _bellman_ford sc [] (out_arcs rg sc)
+
+    (* Bellman-Ford final table *)
+    let _ = _bellman_ford sc [] (out_arcs rg sc) in
 
     (* Get path by parsing back hashtable *)
+    let rec get_path_from_hashtbl acc_path current_id delta = 
+        let (_, predecessor_id) = Hashtbl.find hashtbl current_id in
+
+        match find_arc rg predecessor_id current_id with
+            | Some (residual_flow, _, direction) -> 
+                let delta = if residual_flow < delta || delta = 0 then residual_flow else delta in
+    
+                if predecessor_id = sc then
+                    (((sc, direction) :: acc_path), delta) 
+                else
+                    get_path_from_hashtbl ((predecessor_id, direction) :: acc_path) predecessor_id delta
+
+            (* Not supposed to get there *)
+            | None -> failwith "bellmand_ford";
+    in
+    (* We start the search from the sink node *)
+    get_path_from_hashtbl [(sk, Same)] sk 0
+    
 
 (* === Depth First Search === *)
 let dfs rg sc sk = 
@@ -168,13 +190,13 @@ let bfs rg sc sk =
 let find_augmenting_path rg sc sk = 
     (* Either dfs, bfs.
      * They all respect the same output format for the resulting path *)
-    bfs rg sc sk
+    bellman_ford rg sc sk
 
 
 let update_edge fn id1 id2 delta =
     match find_arc fn id1 id2 with 
     | None  -> fn
-    | Some (flow, capacity) -> new_arc fn id1 id2 (flow + delta, capacity)
+    | Some (flow, capacity, weight) -> new_arc fn id1 id2 (flow + delta, capacity, weight)
 
 (* This function receives the path '(id, direction) list'
  * resulting from 'find_augmenting_path' *)
