@@ -1,7 +1,7 @@
 #!/bin/bash
 
-progname="fordfulk"
-output_extension="fordfulked"
+progname="bipartite"
+output_extension="solved"
 
 if [ ! "$#" -eq 3 ]; then
 	echo "$progname Graph_path Source_node_id Sink_node_id"
@@ -43,15 +43,22 @@ inputfilename=$(echo $1 | sed -r "s/.*\/([^/]*$)/\1/g")
 
 dot -Tsvg "$1.dot" > "./graphs/SVGs/$inputfilename.svg"
 if [ "$#" -eq 4 ]; then
+
 	outputfilename=$(echo $4 | sed -r "s/.*\/([^/]*$)/\1/g")
+
 	dot -Tsvg "$4.dot" > "./graphs/SVGs/$outputfilename.svg"
-	firefox ./graphs/SVGs/$inputfilename.svg ./graphs/SVGs/$outputfilename.svg
+	dot -Tsvg "$1.intermediate.dot" > "./graphs/SVGs/$outputfilename.intermediate.svg"
+
+	firefox ./graphs/SVGs/$inputfilename.intermediate.svg ./graphs/SVGs/$outputfilename.svg
 else
 	dot -Tsvg "$1.$output_extension.dot" > "./graphs/SVGs/$inputfilename.$output_extension.svg"
-	rm -f ./graphs/$1.$output_extension.dot
-	firefox ./graphs/SVGs/$inputfilename.svg ./graphs/SVGs/$inputfilename.$output_extension.svg
+	dot -Tsvg "$1.intermediate.dot" > "./graphs/SVGs/$inputfilename.intermediate.svg"
+
+	#rm -f ./graphs/$1.$output_extension.dot
+
+	firefox ./graphs/SVGs/$inputfilename.intermediate.svg ./graphs/SVGs/$inputfilename.$output_extension.svg
 fi
 		
-
+#rm -f ./graphs/*.dot
 
 
