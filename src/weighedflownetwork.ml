@@ -9,31 +9,6 @@ type edge = flow * capacity * weight
 
 type weighedflownetwork = edge graph
 
-
-(* [WIP] Update arc between id1 & id2 nodes
-in flownetwork "fn" with flow value "flow".
- * fn : the flownetwork we are searching in.
- * id1 : start node.
- * id2 : end node.
- * flow : flow update. 
- update : flownetwork -> id -> id -> int -> ()
- TODO : Improve : both arcs with 1 function 
-let update fn id1 id2 flow =
-
-  let () =
-    (* Updating arc, if it exists *)
-    match find_arc fn id1 id2 with
-      | None -> ()
-      | Some arc -> add_arc fn id1 id2 flow
-    (* Second arc
-    match find_arc fn id2 id1 with
-      | None -> ()
-      | Some arc -> add_arc fn id2 id1 (-flow)) *)
-  in
-  ()
-            
-*)
-
 type direction = Same | Opposite
 type residual_graph = (flow * weight * direction) graph
 
@@ -233,7 +208,7 @@ let rec update_flow_network fn delta = function
 
 (* Busacker-Gowen Algorithm on weighed flow networks
 
- * fn : flownetwork
+ * wfn : weighedflownetwork
  * sc: Source node, the node we begin our research from
  * sk: Sink node, the node we are looking for
 

@@ -1,5 +1,3 @@
-open Graph
-open Tools
 
 let handle_default infile outfile =
     Printf.printf "Default behaviour : export graph into .dot format\n%!";
