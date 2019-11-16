@@ -3,11 +3,8 @@
 progname="bipartite"
 output_extension="solved"
 
-if [ ! "$#" -eq 3 ]; then
-	echo "$progname Graph_path Source_node_id Sink_node_id"
-	echo "\t\tOR"
-	echo "$progname Graph_path Source_node_id Sink_node_id Output_graph_path"
-	echo "If you want the output_file to be auto generated with the same path.$output_extension"
+if [ ! "$#" -eq 1 ]; then
+	echo "$progname filepath.bprtt"
 	exit 1
 fi
 
@@ -25,11 +22,7 @@ fi
 # Fetch the bytecode executable
 elf_prog=$(ls -A1 | grep ftest)
 
-if [ "$#" -eq 4 ]; then
-	./$elf_prog "$1" "$2" "$3" "$4"
-else
-	./$elf_prog "$1" "$2" "$3" "$1.$output_extension"
-fi
+./$elf_prog "$1" "2" "3" "$1.$output_extension"
 
 
 if [ ! "$?" -eq 0 ]; then

@@ -1,6 +1,6 @@
+open Graph
 open Weighedflownetwork
 open Printf
-open Graph
 
 type path = string
 

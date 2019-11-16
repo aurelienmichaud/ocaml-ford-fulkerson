@@ -222,7 +222,7 @@ let export bg input_path output_path goal =
 
     let output_file = open_out (output_path ^ ".dot") in 
 
-    fprintf output_file "digraph finite_state_machine {\n";
+    fprintf output_file "digraph {\n";
     fprintf output_file "\trankdir=LR;\n";
     fprintf output_file "\tnode [shape = circle];\n";
 

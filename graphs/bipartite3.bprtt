@@ -1,0 +1,83 @@
+
+% Sports
+Badminton:20
+Football:3
+Karate:3
+Natation:2
+Dance:10
+Basketball:10
+
+Dupont = Badminton, Football
+1| Dupont = Natation
+2| Dupont = Dance
+3| Dupont = Basketball
+4| Dupont = Karate
+
+Bertrand = Badminton, Football, Karate
+1| Bertrand = Kayak 
+2| Bertrand = Dance
+3| Bertrand = Baseball
+4| Bertrand = LancerDePoids
+
+Charlie = Badminton,Football
+1| Charlie = Dance
+2| Charlie = Natation, Cricket, Volley
+
+Anasthasia = Cricket,Basketball
+
+Caroline = Cricket,Basketball
+
+Florian = Natation
+
+Angele = Natation
+
+Alexis = Athletisme
+1| Alexis = Kayak
+2| Alexis = Football
+3| Alexis = Natation
+4| Alexis = Karate
+
+Floriane = Skateboard, Natation
+1| Floriane = Baseball
+2| Floriane = Cricket
+3| Floriane = PlancheAVoile
+4| Floriane = Karate
+
+Basil = Natation
+1| Basil = Kayak
+2| Basil = Judo
+3| Basil = Football
+4| Basil = Karate
+
+Clotilde = Natation
+1| Clotilde = Dance
+
+Aurelien = Badminton
+1| Aurelien = Basketball
+2| Aurelien = Volley
+
+Martin = Baseball
+1| Martin = Basketball
+
+Mael = Natation
+1| Mael = Basketball
+
+Axel = Handball
+1| Axel = Basketball
+
+Gatwick = Basketball
+1| Gatwick = PlancheAVoile
+2| Gatwick = LancerDePoids
+3| Gatwick = Gym
+
+Laurent = Karate
+1| Laurent = Judo
+2| Laurent = Kayak
+3| Laurent = Gym
+
+Bernard = LancerDePoids
+1| Bernard = Dance
+2| Bernard = Badminton
+3| Bernard = Gym
+
+
