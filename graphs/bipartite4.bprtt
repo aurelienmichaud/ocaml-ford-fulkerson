@@ -1,0 +1,12 @@
+
+
+
+BestChoice:7
+WhyNot:7
+NoOneWantsIt:7
+
+A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U=BestChoice
+1|A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U=WhyNot
+2|A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U=NoOneWantsIt
+
+
