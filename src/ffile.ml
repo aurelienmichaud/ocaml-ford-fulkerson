@@ -14,9 +14,30 @@ let edge_of_string str =
     | [f;c] -> (int_of_string f, int_of_string c)
     | _     -> (0,0) (* Not supposed to get there *)
 
+(* The file format can be the same as the graph file format
+ * i.e. the label is only one number, in which case it will represent 
+ * the capacity and the flow will be set with a value of 0.
+ * Otherwise the file format can have that same format but with
+ * string labels as follow: "13/26". Such case needs to parse the string
+ * to get the flow (13) and the capacity (26) out of it.
+*)
 let from_file path =
+
+    let parse s =
+        match String.split_on_char '/' s with
+            | [flow;capacity]   -> ((int_of_string flow), (int_of_string capacity))
+            | _                 -> raise (Graph_error ("Incorrect file format"))
+    in
+
     let string_flownet = Gfile.from_file path in
-    gmap string_flownet (fun s -> 0, (int_of_string s))
+    (* Try the graph file format *)
+    try
+        gmap string_flownet (fun s -> 0, (int_of_string s))
+    with _  ->
+        (* Otherwise, try the flow/capacity string label format *)
+        try
+            gmap string_flownet (fun s -> parse s)
+        with _  -> failwith "Error : Incorrect file format (Ffile.from_file function)"
 
 let export path flownet = 
     let string_flownet = gmap flownet (fun (f, c) -> (string_of_int f) ^ "/" ^ (string_of_int c)) in

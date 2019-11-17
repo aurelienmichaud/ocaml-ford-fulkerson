@@ -48,10 +48,10 @@ if [ "$#" -eq 4 ]; then
 	firefox ./graphs/SVGs/$inputfilename.svg ./graphs/SVGs/$outputfilename.svg
 else
 	dot -Tsvg "$1.$output_extension.dot" > "./graphs/SVGs/$inputfilename.$output_extension.svg"
-	rm -f ./graphs/$1.$output_extension.dot
+	#rm -f ./graphs/$1.$output_extension.dot
 	firefox ./graphs/SVGs/$inputfilename.svg ./graphs/SVGs/$inputfilename.$output_extension.svg
 fi
 		
-
+#rm -f ./graphs/*.dot
 
 
