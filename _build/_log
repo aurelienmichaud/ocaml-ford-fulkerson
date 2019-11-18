@@ -1,0 +1,82 @@
+### Starting build.
+# Target: src/ftest.ml.depends, tags: { extension:ml, file:src/ftest.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/ftest.ml > src/ftest.ml.depends # cached
+# Target: src/bfile.mli.depends, tags: { extension:mli, file:src/bfile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/bfile.mli > src/bfile.mli.depends # cached
+# Target: src/weightedflownetwork.mli.depends, tags: { extension:mli, file:src/weightedflownetwork.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/weightedflownetwork.mli > src/weightedflownetwork.mli.depends # cached
+# Target: src/graph.mli.depends, tags: { extension:mli, file:src/graph.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/graph.mli > src/graph.mli.depends # cached
+# Target: src/graph.cmi, tags: { byte, compile, extension:mli, file:src/graph.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/graph.cmi src/graph.mli # cached
+# Target: src/weightedflownetwork.cmi, tags: { byte, compile, extension:mli, file:src/weightedflownetwork.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/weightedflownetwork.cmi src/weightedflownetwork.mli # cached
+# Target: src/bfile.cmi, tags: { byte, compile, extension:mli, file:src/bfile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/bfile.cmi src/bfile.mli # cached
+# Target: src/bipartite.mli.depends, tags: { extension:mli, file:src/bipartite.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/bipartite.mli > src/bipartite.mli.depends # cached
+# Target: src/bipartite.cmi, tags: { byte, compile, extension:mli, file:src/bipartite.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/bipartite.cmi src/bipartite.mli # cached
+# Target: src/ffile.mli.depends, tags: { extension:mli, file:src/ffile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/ffile.mli > src/ffile.mli.depends # cached
+# Target: src/flownetwork.mli.depends, tags: { extension:mli, file:src/flownetwork.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/flownetwork.mli > src/flownetwork.mli.depends # cached
+# Target: src/flownetwork.cmi, tags: { byte, compile, extension:mli, file:src/flownetwork.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/flownetwork.cmi src/flownetwork.mli # cached
+# Target: src/ffile.cmi, tags: { byte, compile, extension:mli, file:src/ffile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/ffile.cmi src/ffile.mli # cached
+# Target: src/gfile.mli.depends, tags: { extension:mli, file:src/gfile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/gfile.mli > src/gfile.mli.depends # cached
+# Target: src/gfile.cmi, tags: { byte, compile, extension:mli, file:src/gfile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/gfile.cmi src/gfile.mli # cached
+# Target: src/wffile.mli.depends, tags: { extension:mli, file:src/wffile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/wffile.mli > src/wffile.mli.depends
+# Target: src/wffile.cmi, tags: { byte, compile, extension:mli, file:src/wffile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/wffile.cmi src/wffile.mli
+# Target: src/ftest.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:src/ftest.cmo, file:src/ftest.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/ftest.cmo src/ftest.ml
+# Target: src/bfile.ml.depends, tags: { extension:ml, file:src/bfile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/bfile.ml > src/bfile.ml.depends
+# Target: src/graph.ml.depends, tags: { extension:ml, file:src/graph.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/graph.ml > src/graph.ml.depends
+# Target: src/tools.ml.depends, tags: { extension:ml, file:src/tools.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/tools.ml > src/tools.ml.depends
+# Target: src/tools.mli.depends, tags: { extension:mli, file:src/tools.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/tools.mli > src/tools.mli.depends
+# Target: src/tools.cmi, tags: { byte, compile, extension:mli, file:src/tools.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -I src -o src/tools.cmi src/tools.mli
+# Target: src/graph.cmx, tags: { compile, extension:cmx, extension:ml, file:src/graph.cmx, file:src/graph.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/graph.cmx src/graph.ml
+# Target: src/weightedflownetwork.ml.depends, tags: { extension:ml, file:src/weightedflownetwork.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/weightedflownetwork.ml > src/weightedflownetwork.ml.depends
+# Target: src/tools.cmx, tags: { compile, extension:cmx, extension:ml, file:src/tools.cmx, file:src/tools.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/tools.cmx src/tools.ml
+# Target: src/weightedflownetwork.cmx, tags: { compile, extension:cmx, extension:ml, file:src/weightedflownetwork.cmx, file:src/weightedflownetwork.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/weightedflownetwork.cmx src/weightedflownetwork.ml
+# Target: src/bipartite.ml.depends, tags: { extension:ml, file:src/bipartite.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/bipartite.ml > src/bipartite.ml.depends
+# Target: src/ffile.ml.depends, tags: { extension:ml, file:src/ffile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/ffile.ml > src/ffile.ml.depends
+# Target: src/gfile.ml.depends, tags: { extension:ml, file:src/gfile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/gfile.ml > src/gfile.ml.depends
+# Target: src/flownetwork.ml.depends, tags: { extension:ml, file:src/flownetwork.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/flownetwork.ml > src/flownetwork.ml.depends
+# Target: src/gfile.cmx, tags: { compile, extension:cmx, extension:ml, file:src/gfile.cmx, file:src/gfile.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/gfile.cmx src/gfile.ml
+# Target: src/flownetwork.cmx, tags: { compile, extension:cmx, extension:ml, file:src/flownetwork.cmx, file:src/flownetwork.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/flownetwork.cmx src/flownetwork.ml
+# Target: src/wffile.ml.depends, tags: { extension:ml, file:src/wffile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules src/wffile.ml > src/wffile.ml.depends
+# Target: src/bfile.cmx, tags: { compile, extension:cmx, extension:ml, file:src/bfile.cmx, file:src/bfile.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/bfile.cmx src/bfile.ml
+# Target: src/bipartite.cmx, tags: { compile, extension:cmx, extension:ml, file:src/bipartite.cmx, file:src/bipartite.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/bipartite.cmx src/bipartite.ml
+# Target: src/ffile.cmx, tags: { compile, extension:cmx, extension:ml, file:src/ffile.cmx, file:src/ffile.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/ffile.cmx src/ffile.ml
+# Target: src/wffile.cmx, tags: { compile, extension:cmx, extension:ml, file:src/wffile.cmx, file:src/wffile.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/wffile.cmx src/wffile.ml
+# Target: src/ftest.cmx, tags: { compile, extension:cmx, extension:ml, file:src/ftest.cmx, file:src/ftest.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt.opt -c -I src -o src/ftest.cmx src/ftest.ml
+# Target: src/ftest.native, tags: { dont_link_with, extension:native, file:src/ftest.native, link, native, ocaml, program, quiet }
+/usr/bin/ocamlopt.opt -I src src/graph.cmx src/tools.cmx src/weightedflownetwork.cmx src/bfile.cmx src/bipartite.cmx src/flownetwork.cmx src/gfile.cmx src/ffile.cmx src/wffile.cmx src/ftest.cmx -o src/ftest.native
+# Compilation successful.
