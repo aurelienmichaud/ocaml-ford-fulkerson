@@ -16,7 +16,7 @@ let handle_bipartite infile outfile =
     let new_graph = Bipartite.solve graph in
 
     (* Export the infile graph as a SVG file to get a reference to look at *)
-    let () = Wffile.export infile graph  in
+    let () = Wffile.export infile new_graph  in
     (* Export the new graph with the translation file made by Bfile.from_file.
      * Hence we need to provide the infile path too *)
     let () = Bfile.export new_graph infile outfile "final" in

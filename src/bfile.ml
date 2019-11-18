@@ -135,7 +135,7 @@ let read_line n graph hashtbl line =
             | _ ->
     
             match get_connection_line line with
-                | Some (froms, tos) -> read_connection_line n graph hashtbl "0" froms tos
+                | Some (froms, tos) -> read_connection_line n graph hashtbl "1" froms tos
                 | _ -> 
                     Printf.printf "Unknown line:\n'%s'\n%!" line;
                     failwith "from_file"

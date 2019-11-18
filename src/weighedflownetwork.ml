@@ -39,7 +39,7 @@ let bellman_ford rg sc sk =
     let hashtbl = Hashtbl.create 100 in
     (* Insert the source node in the hash table with a weight of 0 and
      * itself as its predecessor to start the algorithm *)
-    Hashtbl.add hashtbl sc (0, sc);
+    Hashtbl.add hashtbl sc (1, sc);
     (* Insert the sink node with maximum weight so that it will be replaced later *)
     Hashtbl.add hashtbl sk (999999, sk);
 
