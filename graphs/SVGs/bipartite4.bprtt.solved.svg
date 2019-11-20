@@ -112,17 +112,17 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-722" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-718.3" font-family="Times,serif" font-size="14.00" fill="#000000">H</text>
 </g>
-<!-- WhyNot (7) -->
+<!-- BestChoice (7) -->
 <g id="node10" class="node">
-<title>WhyNot (7)</title>
-<ellipse fill="none" stroke="#000000" cx="158.0398" cy="-560" rx="53.8905" ry="53.8905"/>
-<text text-anchor="middle" x="158.0398" y="-556.3" font-family="Times,serif" font-size="14.00" fill="#000000">WhyNot (7)</text>
+<title>BestChoice (7)</title>
+<ellipse fill="none" stroke="#000000" cx="158.0398" cy="-560" rx="63.8893" ry="63.8893"/>
+<text text-anchor="middle" x="158.0398" y="-556.3" font-family="Times,serif" font-size="14.00" fill="#000000">BestChoice (7)</text>
 </g>
-<!-- H&#45;&gt;WhyNot (7) -->
+<!-- H&#45;&gt;BestChoice (7) -->
 <g id="edge8" class="edge">
-<title>H&#45;&gt;WhyNot (7)</title>
-<path fill="none" stroke="#ffa500" stroke-width="2" d="M30.7157,-708.188C49.4797,-686.3493 86.8896,-642.8091 116.3263,-608.5488"/>
-<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="118.9946,-610.8139 122.8569,-600.9481 113.6852,-606.252 118.9946,-610.8139"/>
+<title>H&#45;&gt;BestChoice (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M30.7157,-708.188C48.1227,-687.9286 81.5763,-648.9931 109.8249,-616.1156"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="112.6452,-618.2037 116.5075,-608.3379 107.3359,-613.6419 112.6452,-618.2037"/>
 <text text-anchor="middle" x="59.1967" y="-681.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- I -->
@@ -131,11 +131,11 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-668" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-664.3" font-family="Times,serif" font-size="14.00" fill="#000000">I</text>
 </g>
-<!-- I&#45;&gt;WhyNot (7) -->
+<!-- I&#45;&gt;BestChoice (7) -->
 <g id="edge9" class="edge">
-<title>I&#45;&gt;WhyNot (7)</title>
-<path fill="none" stroke="#ffa500" stroke-width="2" d="M33.22,-656.8489C50.5935,-643.3686 80.7813,-619.9456 107.1169,-599.5115"/>
-<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="109.3928,-602.1757 115.1479,-593.2802 105.1017,-596.6452 109.3928,-602.1757"/>
+<title>I&#45;&gt;BestChoice (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M33.22,-656.8489C48.946,-644.6469 75.1713,-624.2985 99.5352,-605.3943"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="101.9534,-607.948 107.7085,-599.0525 97.6623,-602.4175 101.9534,-607.948"/>
 <text text-anchor="middle" x="59.1967" y="-642.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- J -->
@@ -144,11 +144,11 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-614" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-610.3" font-family="Times,serif" font-size="14.00" fill="#000000">J</text>
 </g>
-<!-- J&#45;&gt;WhyNot (7) -->
+<!-- J&#45;&gt;BestChoice (7) -->
 <g id="edge10" class="edge">
-<title>J&#45;&gt;WhyNot (7)</title>
-<path fill="none" stroke="#ffa500" stroke-width="2" d="M35.6381,-607.4863C51.2019,-601.4483 75.3132,-592.0942 98.0343,-583.2794"/>
-<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="99.6008,-586.4259 107.6578,-579.5459 97.0689,-579.8998 99.6008,-586.4259"/>
+<title>J&#45;&gt;BestChoice (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M35.6381,-607.4863C49.1833,-602.2314 69.2026,-594.4648 89.145,-586.728"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="90.5311,-589.9445 98.5882,-583.0645 87.9993,-583.4184 90.5311,-589.9445"/>
 <text text-anchor="middle" x="59.1967" y="-602.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- K -->
@@ -157,11 +157,11 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-560" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-556.3" font-family="Times,serif" font-size="14.00" fill="#000000">K</text>
 </g>
-<!-- K&#45;&gt;WhyNot (7) -->
+<!-- K&#45;&gt;BestChoice (7) -->
 <g id="edge11" class="edge">
-<title>K&#45;&gt;WhyNot (7)</title>
-<path fill="none" stroke="#ffa500" stroke-width="2" d="M37.0452,-560C51.6739,-560 73.148,-560 93.9601,-560"/>
-<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="94.0909,-563.5001 104.0909,-560 94.0909,-556.5001 94.0909,-563.5001"/>
+<title>K&#45;&gt;BestChoice (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M37.0452,-560C49.3037,-560 66.3691,-560 83.8238,-560"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="84.1125,-563.5001 94.1125,-560 84.1124,-556.5001 84.1125,-563.5001"/>
 <text text-anchor="middle" x="59.1967" y="-563.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- L -->
@@ -170,11 +170,11 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-506" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-502.3" font-family="Times,serif" font-size="14.00" fill="#000000">L</text>
 </g>
-<!-- L&#45;&gt;WhyNot (7) -->
+<!-- L&#45;&gt;BestChoice (7) -->
 <g id="edge12" class="edge">
-<title>L&#45;&gt;WhyNot (7)</title>
-<path fill="none" stroke="#ffa500" stroke-width="2" d="M35.6381,-512.5137C51.2019,-518.5517 75.3132,-527.9058 98.0343,-536.7206"/>
-<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="97.0689,-540.1002 107.6578,-540.4541 99.6008,-533.5741 97.0689,-540.1002"/>
+<title>L&#45;&gt;BestChoice (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M35.6381,-512.5137C49.1833,-517.7686 69.2026,-525.5352 89.145,-533.272"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="87.9993,-536.5816 98.5882,-536.9355 90.5311,-530.0555 87.9993,-536.5816"/>
 <text text-anchor="middle" x="59.1967" y="-525.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- M -->
@@ -183,11 +183,11 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-451" rx="18.6979" ry="18.6979"/>
 <text text-anchor="middle" x="18.8483" y="-447.3" font-family="Times,serif" font-size="14.00" fill="#000000">M</text>
 </g>
-<!-- M&#45;&gt;WhyNot (7) -->
+<!-- M&#45;&gt;BestChoice (7) -->
 <g id="edge13" class="edge">
-<title>M&#45;&gt;WhyNot (7)</title>
-<path fill="none" stroke="#ffa500" stroke-width="2" d="M33.7443,-462.6649C51.286,-476.4018 81.3526,-499.9467 107.5201,-520.4384"/>
-<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="105.4666,-523.2757 115.4978,-526.6856 109.7825,-517.7645 105.4666,-523.2757"/>
+<title>M&#45;&gt;BestChoice (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M33.7443,-462.6649C49.5596,-475.0498 75.5556,-495.4072 99.6963,-514.3116"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="97.7635,-517.2434 107.7946,-520.6533 102.0793,-511.7322 97.7635,-517.2434"/>
 <text text-anchor="middle" x="59.1967" y="-487.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- N -->
@@ -196,11 +196,11 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-396" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#000000">N</text>
 </g>
-<!-- N&#45;&gt;WhyNot (7) -->
+<!-- N&#45;&gt;BestChoice (7) -->
 <g id="edge14" class="edge">
-<title>N&#45;&gt;WhyNot (7)</title>
-<path fill="none" stroke="#ffa500" stroke-width="2" d="M30.7157,-409.9825C49.4797,-432.0909 86.8896,-476.1685 116.3263,-510.8518"/>
-<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="113.7175,-513.187 122.8569,-518.5463 119.0545,-508.6573 113.7175,-513.187"/>
+<title>N&#45;&gt;BestChoice (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M30.7157,-409.9825C48.1836,-430.5637 81.8105,-470.1841 110.121,-503.5405"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="107.6769,-506.0697 116.8163,-511.4291 113.0139,-501.5401 107.6769,-506.0697"/>
 <text text-anchor="middle" x="59.1967" y="-448.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- O -->
@@ -209,18 +209,18 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-1100" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-1096.3" font-family="Times,serif" font-size="14.00" fill="#000000">O</text>
 </g>
-<!-- BestChoice (7) -->
+<!-- WhyNot (7) -->
 <g id="node18" class="node">
-<title>BestChoice (7)</title>
-<ellipse fill="none" stroke="#000000" cx="158.0398" cy="-938" rx="63.8893" ry="63.8893"/>
-<text text-anchor="middle" x="158.0398" y="-934.3" font-family="Times,serif" font-size="14.00" fill="#000000">BestChoice (7)</text>
+<title>WhyNot (7)</title>
+<ellipse fill="none" stroke="#000000" cx="158.0398" cy="-938" rx="53.8905" ry="53.8905"/>
+<text text-anchor="middle" x="158.0398" y="-934.3" font-family="Times,serif" font-size="14.00" fill="#000000">WhyNot (7)</text>
 </g>
-<!-- O&#45;&gt;BestChoice (7) -->
+<!-- O&#45;&gt;WhyNot (7) -->
 <g id="edge15" class="edge">
-<title>O&#45;&gt;BestChoice (7)</title>
-<path fill="none" stroke="#00ff00" d="M30.7157,-1086.188C48.1227,-1065.9286 81.5763,-1026.9931 109.8249,-994.1156"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="112.6452,-996.2037 116.5075,-986.3379 107.3359,-991.6419 112.6452,-996.2037"/>
-<text text-anchor="middle" x="59.1967" y="-1059.8" font-family="Times,serif" font-size="14.00" fill="#000000">0</text>
+<title>O&#45;&gt;WhyNot (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M30.7157,-1086.188C49.4797,-1064.3493 86.8896,-1020.8091 116.3263,-986.5488"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="118.9946,-988.8139 122.8569,-978.9481 113.6852,-984.252 118.9946,-988.8139"/>
+<text text-anchor="middle" x="59.1967" y="-1059.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- P -->
 <g id="node19" class="node">
@@ -228,12 +228,12 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-1046" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-1042.3" font-family="Times,serif" font-size="14.00" fill="#000000">P</text>
 </g>
-<!-- P&#45;&gt;BestChoice (7) -->
+<!-- P&#45;&gt;WhyNot (7) -->
 <g id="edge16" class="edge">
-<title>P&#45;&gt;BestChoice (7)</title>
-<path fill="none" stroke="#00ff00" d="M33.22,-1034.8489C48.946,-1022.6469 75.1713,-1002.2985 99.5352,-983.3943"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="101.9534,-985.948 107.7085,-977.0525 97.6623,-980.4175 101.9534,-985.948"/>
-<text text-anchor="middle" x="59.1967" y="-1020.8" font-family="Times,serif" font-size="14.00" fill="#000000">0</text>
+<title>P&#45;&gt;WhyNot (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M33.22,-1034.8489C50.5935,-1021.3686 80.7813,-997.9456 107.1169,-977.5115"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="109.3928,-980.1757 115.1479,-971.2802 105.1017,-974.6452 109.3928,-980.1757"/>
+<text text-anchor="middle" x="59.1967" y="-1020.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- Q -->
 <g id="node20" class="node">
@@ -241,12 +241,12 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-992" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-988.3" font-family="Times,serif" font-size="14.00" fill="#000000">Q</text>
 </g>
-<!-- Q&#45;&gt;BestChoice (7) -->
+<!-- Q&#45;&gt;WhyNot (7) -->
 <g id="edge17" class="edge">
-<title>Q&#45;&gt;BestChoice (7)</title>
-<path fill="none" stroke="#00ff00" d="M35.6381,-985.4863C49.1833,-980.2314 69.2026,-972.4648 89.145,-964.728"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="90.5311,-967.9445 98.5882,-961.0645 87.9993,-961.4184 90.5311,-967.9445"/>
-<text text-anchor="middle" x="59.1967" y="-980.8" font-family="Times,serif" font-size="14.00" fill="#000000">0</text>
+<title>Q&#45;&gt;WhyNot (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M35.6381,-985.4863C51.2019,-979.4483 75.3132,-970.0942 98.0343,-961.2794"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="99.6008,-964.4259 107.6578,-957.5459 97.0689,-957.8998 99.6008,-964.4259"/>
+<text text-anchor="middle" x="59.1967" y="-980.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- R -->
 <g id="node21" class="node">
@@ -254,12 +254,12 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-938" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-934.3" font-family="Times,serif" font-size="14.00" fill="#000000">R</text>
 </g>
-<!-- R&#45;&gt;BestChoice (7) -->
+<!-- R&#45;&gt;WhyNot (7) -->
 <g id="edge18" class="edge">
-<title>R&#45;&gt;BestChoice (7)</title>
-<path fill="none" stroke="#00ff00" d="M37.0452,-938C49.3037,-938 66.3691,-938 83.8238,-938"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="84.1125,-941.5001 94.1125,-938 84.1124,-934.5001 84.1125,-941.5001"/>
-<text text-anchor="middle" x="59.1967" y="-941.8" font-family="Times,serif" font-size="14.00" fill="#000000">0</text>
+<title>R&#45;&gt;WhyNot (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M37.0452,-938C51.6739,-938 73.148,-938 93.9601,-938"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="94.0909,-941.5001 104.0909,-938 94.0909,-934.5001 94.0909,-941.5001"/>
+<text text-anchor="middle" x="59.1967" y="-941.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- S -->
 <g id="node22" class="node">
@@ -267,12 +267,12 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-884" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-880.3" font-family="Times,serif" font-size="14.00" fill="#000000">S</text>
 </g>
-<!-- S&#45;&gt;BestChoice (7) -->
+<!-- S&#45;&gt;WhyNot (7) -->
 <g id="edge19" class="edge">
-<title>S&#45;&gt;BestChoice (7)</title>
-<path fill="none" stroke="#00ff00" d="M35.6381,-890.5137C49.1833,-895.7686 69.2026,-903.5352 89.145,-911.272"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="87.9993,-914.5816 98.5882,-914.9355 90.5311,-908.0555 87.9993,-914.5816"/>
-<text text-anchor="middle" x="59.1967" y="-902.8" font-family="Times,serif" font-size="14.00" fill="#000000">0</text>
+<title>S&#45;&gt;WhyNot (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M35.6381,-890.5137C51.2019,-896.5517 75.3132,-905.9058 98.0343,-914.7206"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="97.0689,-918.1002 107.6578,-918.4541 99.6008,-911.5741 97.0689,-918.1002"/>
+<text text-anchor="middle" x="59.1967" y="-902.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- T -->
 <g id="node23" class="node">
@@ -280,12 +280,12 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-830" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-826.3" font-family="Times,serif" font-size="14.00" fill="#000000">T</text>
 </g>
-<!-- T&#45;&gt;BestChoice (7) -->
+<!-- T&#45;&gt;WhyNot (7) -->
 <g id="edge20" class="edge">
-<title>T&#45;&gt;BestChoice (7)</title>
-<path fill="none" stroke="#00ff00" d="M33.22,-841.1511C48.946,-853.3531 75.1713,-873.7015 99.5352,-892.6057"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="97.6623,-895.5825 107.7085,-898.9475 101.9534,-890.052 97.6623,-895.5825"/>
-<text text-anchor="middle" x="59.1967" y="-864.8" font-family="Times,serif" font-size="14.00" fill="#000000">0</text>
+<title>T&#45;&gt;WhyNot (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M33.22,-841.1511C50.5935,-854.6314 80.7813,-878.0544 107.1169,-898.4885"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="105.1017,-901.3548 115.1479,-904.7198 109.3928,-895.8243 105.1017,-901.3548"/>
+<text text-anchor="middle" x="59.1967" y="-864.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 <!-- U -->
 <g id="node24" class="node">
@@ -293,12 +293,12 @@
 <ellipse fill="none" stroke="#000000" cx="18.8483" cy="-776" rx="18" ry="18"/>
 <text text-anchor="middle" x="18.8483" y="-772.3" font-family="Times,serif" font-size="14.00" fill="#000000">U</text>
 </g>
-<!-- U&#45;&gt;BestChoice (7) -->
+<!-- U&#45;&gt;WhyNot (7) -->
 <g id="edge21" class="edge">
-<title>U&#45;&gt;BestChoice (7)</title>
-<path fill="none" stroke="#00ff00" d="M30.7157,-789.812C48.1227,-810.0714 81.5763,-849.0069 109.8249,-881.8844"/>
-<polygon fill="#00ff00" stroke="#00ff00" points="107.3359,-884.3581 116.5075,-889.6621 112.6452,-879.7963 107.3359,-884.3581"/>
-<text text-anchor="middle" x="59.1967" y="-826.8" font-family="Times,serif" font-size="14.00" fill="#000000">0</text>
+<title>U&#45;&gt;WhyNot (7)</title>
+<path fill="none" stroke="#ffa500" stroke-width="2" d="M30.7157,-789.812C49.4797,-811.6507 86.8896,-855.1909 116.3263,-889.4512"/>
+<polygon fill="#ffa500" stroke="#ffa500" stroke-width="2" points="113.6852,-891.748 122.8569,-897.0519 118.9946,-887.1861 113.6852,-891.748"/>
+<text text-anchor="middle" x="59.1967" y="-826.8" font-family="Times,serif" font-size="14.00" fill="#000000">1</text>
 </g>
 </g>
 </svg>

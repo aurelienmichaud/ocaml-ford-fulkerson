@@ -1,0 +1,23 @@
+
+
+Football:3
+Karate:3
+Judo:1
+Natation:2
+Kayak:1
+Athletisme:1
+
+%Dupont = Football
+
+Laurent = Karate,Judo, Natation
+
+4|Angele = Natation
+
+Florian = Natation
+
+Basil = Judo, Natation
+
+%Bertrand = Kayak
+
+%Alexis = Kayak, Athletisme
+
