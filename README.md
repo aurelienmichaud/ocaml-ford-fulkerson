@@ -73,7 +73,7 @@ Aurelien, Martin, Didier = Ocaml, Baseball
 Martin = Tennis
 ```
 
-Aurelien, Martin and Didier are each linked to Ocaml and Natation and Martin is also linked to Tennis.
+Aurelien, Martin and Didier are each linked to Ocaml and Baseball and Martin is also linked to Tennis.
 
 ### Pattern 2
 
