@@ -1,0 +1,22 @@
+digraph {
+	rankdir=LR;
+	node [shape = circle];
+	Dupont -> "Football (3)" [ label = "1" color = "orange" penwidth = 2.0];
+	Bertrand -> "Karate (3)" [ label = "1" color = "orange" penwidth = 2.0];
+	Charlie -> "Dance (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Anasthasia -> "Basketball (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Caroline -> "Basketball (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Alexis -> "Athletisme (1)" [ label = "1" color = "orange" penwidth = 2.0];
+	Basil -> "Kayak (1)" [ label = "1" color = "orange" penwidth = 2.0];
+	Florian -> "Natation (2)" [ label = "1" color = "orange" penwidth = 2.0];
+	Angele -> "Natation (2)" [ label = "1" color = "orange" penwidth = 2.0];
+	Floriane -> "Baseball (1)" [ label = "1" color = "orange" penwidth = 2.0];
+	Clotilde -> "Dance (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Aurelien -> "Basketball (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Martin -> "Basketball (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Mael -> "Basketball (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Axel -> "Basketball (10)" [ label = "1" color = "orange" penwidth = 2.0];
+	Gatwick -> "PlancheAVoile (1)" [ label = "1" color = "orange" penwidth = 2.0];
+	Laurent -> "Judo (1)" [ label = "1" color = "orange" penwidth = 2.0];
+	Bernard -> "Dance (10)" [ label = "1" color = "orange" penwidth = 2.0];
+}

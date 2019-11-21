@@ -1,6 +1,7 @@
 # ocaml-ford-fulkerson
 
- - fordfulk: automated bash script to make, run ftest bytecode executable AND export the graphs into svg format
+ - fordfulk: automated bash script to make, run ftest bytecode executable (solve the flow network problem) AND export the flow network graphs into svg format
+ - bipartite: automated bash script to make, run ftest bytecode executable (solve the bipartite problem) AND export the bipartite graphs into svg format
 
 ## src Directory
 
