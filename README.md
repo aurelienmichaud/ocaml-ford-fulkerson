@@ -52,11 +52,15 @@ for example.
 
 It's the same format as the graph file format, but the label can either be one number, in that case that number is considered to be the capacity and the flow is set to 0. Otherwise the label can be written as follow : 2/15, which will be translated as flow = 2 and capacity = 15.
 
+In order for ftest to consider the file as a flow network solving problem you need to add the 'flwnt' extension to the file.
+
 ## Bipartite file format
 
 Comments are written with a '%' at the beginning of the line.
 
 Blanks are ignored.
+
+In order for ftest to consider a bipartite file and algorithm you need to add the '.bprtt' extension to the file.
 
 There are 3 types of patterns :
 
