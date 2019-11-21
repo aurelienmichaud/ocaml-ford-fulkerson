@@ -69,7 +69,7 @@ This pattern means that 'name1', 'name2', etc will be linked to 'choiceI', 'choi
 
 Example :
 ```
-Aurelien, Martin, Didier = Ocaml, Natation
+Aurelien, Martin, Didier = Ocaml, Baseball
 Martin = Tennis
 ```
 
