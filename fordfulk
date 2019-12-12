@@ -4,9 +4,9 @@ progname="fordfulk"
 output_extension="fordfulked"
 
 if [ ! "$#" -eq 3 ]; then
-	echo "$progname Graph_path Source_node_id Sink_node_id"
-	echo "\t\tOR"
-	echo "$progname Graph_path Source_node_id Sink_node_id Output_graph_path"
+	echo "$progname <Graph_path>.flwnt <Source_node_id> <Sink_node_id>"
+	echo -e "\t\tOR"
+	echo "$progname <Graph_path.flwnt> <Source_node_id> <Sink_node_id> <Output_graph_path>"
 	echo "If you want the output_file to be auto generated with the same path.$output_extension"
 	exit 1
 fi
